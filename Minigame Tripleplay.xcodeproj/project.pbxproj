@@ -18,6 +18,7 @@
 		03184D38224D4A51008352D4 /* WarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03184D37224D4A51008352D4 /* WarViewController.swift */; };
 		03C90B8022551A8C000E450F /* GallowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C90B7F22551A8C000E450F /* GallowsViewController.swift */; };
 		03C90B822255205E000E450F /* RectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C90B812255205E000E450F /* RectView.swift */; };
+		03C90B8422566B69000E450F /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C90B8322566B69000E450F /* PersonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		03184D37224D4A51008352D4 /* WarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarViewController.swift; sourceTree = "<group>"; };
 		03C90B7F22551A8C000E450F /* GallowsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallowsViewController.swift; sourceTree = "<group>"; };
 		03C90B812255205E000E450F /* RectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectView.swift; sourceTree = "<group>"; };
+		03C90B8322566B69000E450F /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				03184D35224D4A34008352D4 /* HangmanViewController.swift */,
 				03C90B812255205E000E450F /* RectView.swift */,
 				03184D21224C20C8008352D4 /* Main.storyboard */,
+				03C90B8322566B69000E450F /* PersonViewController.swift */,
 				03C90B7F22551A8C000E450F /* GallowsViewController.swift */,
 				03184D37224D4A51008352D4 /* WarViewController.swift */,
 				03184D33224D45E0008352D4 /* CircleView.swift */,
@@ -157,6 +160,7 @@
 				03C90B8022551A8C000E450F /* GallowsViewController.swift in Sources */,
 				03184D34224D45E0008352D4 /* CircleView.swift in Sources */,
 				03C90B822255205E000E450F /* RectView.swift in Sources */,
+				03C90B8422566B69000E450F /* PersonViewController.swift in Sources */,
 				03184D20224C20C8008352D4 /* TicTacToeViewController.swift in Sources */,
 				03184D1E224C20C8008352D4 /* AppDelegate.swift in Sources */,
 				03184D38224D4A51008352D4 /* WarViewController.swift in Sources */,
