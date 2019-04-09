@@ -15,7 +15,12 @@ class HangmanViewController: UIViewController {
     @IBOutlet var sToz: UIStackView!
     @IBOutlet var verticalConstraint: NSLayoutConstraint!
     @IBOutlet var wordLabel: UILabel!
+    @IBOutlet var gallowsView: UIView!
+    
     var word: String?
+    var replacingArr: String? = "_"
+    var wrongs = 0
+    var win = false
     
     var wordList = ["able", "about", "account", "acid", "across", "act", "addition", "adjustment",
                     "advertisement", "after", "again", "against", "agreement", "air", "all", "almost", "among",
@@ -101,6 +106,21 @@ class HangmanViewController: UIViewController {
                     "word", "work", "worm", "wound", "writing", "wrong", "year", "yellow", "yes", "yesterday", "you",
                     "young"]
     
+    func winAnimations(){
+        print("won")
+        UIView.animate(withDuration: 2, delay: 0.0, options:[], animations: {
+            self.wordLabel.alpha = 0.0
+        }, completion: {
+            finished in
+            if finished {
+                self.wordLabel.text = "You Win the Game!"
+                UIView.animate(withDuration: 2, animations: {
+                    self.wordLabel.alpha = 1.0
+                })
+            }
+        })
+    }
+    
     func indicesOf(string: String, substring: Character) -> [Int]{
         var indices1 = [Int]()
         var index = string.startIndex
@@ -114,25 +134,180 @@ class HangmanViewController: UIViewController {
         return indices1
     }
     
+    func addSpaces(string: String) -> String{
+        var str = string
+        var position = str.startIndex
+        while position != str.endIndex{
+            position = str.index(after: position)
+            str.insert(" ", at: position)
+            position = str.index(after: position)
+        }
+        return str
+    }
+    
+    func replace(str: String, char: Character){
+        if let w = word{
+            if w.contains(char){
+                let placesReplace = indicesOf(string: w, substring: char)
+                print(placesReplace)
+                if var r = replacingArr{
+                    for x in placesReplace{
+                        if x != 0{
+                            let upperIndex = r.index(r.startIndex, offsetBy: x+1)
+                            let index = r.index(r.startIndex, offsetBy: x)
+                            replacingArr = r.replacingCharacters(in: index..<upperIndex, with: str)
+                            r = r.replacingCharacters(in: index..<upperIndex, with: str)
+                        }
+                        else{
+                            replacingArr = r.replacingCharacters(in: ...r.startIndex, with: str)
+                            r = r.replacingCharacters(in: ...r.startIndex, with: str)
+                        }
+                    }
+                    let spacedR = addSpaces(string: r)
+                    if w == r{
+                        win = true
+                        wordLabel.text = spacedR
+                        winAnimations()
+                    }
+                    else{
+                        wordLabel.text = spacedR
+                    }
+                    print(r)
+                }
+            }
+            else{
+                wrongs += 1
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         verticalConstraint.constant = 0
+        view.addSubview(gallowsView)
     }
     
     @IBAction func playNow(_ sender: Any) {
+        print(wrongs)
         word = wordList[Int(arc4random_uniform(UInt32(wordList.count)))]
+        replacingArr = ""
         if let w = word{
-            wordLabel.text = w
-            
+            var count = 0
+            while count != w.count{
+                replacingArr?.append("_")
+                count += 1
+            }
+            print(w)
+        }
+        if let r = replacingArr{
+            let spacedR = addSpaces(string: r)
+            wordLabel.text = spacedR
+            print(r)
         }
     }
-
+    
+    //text has speces in it to get the correct string use
+    //r.replacingOccurrences(of: " ", with: "", options:.literal, range: nil)
     @IBAction func aButtonPressed(_ sender: Any) {
-        if let w = word{
-            if w.contains("a"){
-                let placesReplace = indicesOf(string: w, substring: "a")
-                print(placesReplace)
-            }
-        }
+        replace(str: "a", char: "a")
+    }
+    
+    @IBAction func bButtonPressed(_ sender: Any) {
+        replace(str: "b", char: "b")
+    }
+    
+    @IBAction func cButtonPressed(_ sender: Any) {
+        replace(str: "c", char: "c")
+    }
+    
+    @IBAction func dButtonPressed(_ sender: Any) {
+        replace(str: "d", char: "d")
+    }
+    
+    @IBAction func eButtonPressed(_ sender: Any) {
+        replace(str: "e", char: "e")
+    }
+    
+    @IBAction func fButtonPressed(_ sender: Any) {
+        replace(str: "f", char: "f")
+    }
+    
+    @IBAction func gButtonPressed(_ sender: Any) {
+        replace(str: "g", char: "g")
+    }
+    
+    @IBAction func hButtonPressed(_ sender: Any) {
+        replace(str: "h", char: "h")
+    }
+    
+    @IBAction func iButtonPressed(_ sender: Any) {
+        replace(str: "i", char: "i")
+    }
+    
+    @IBAction func jButtonPressed(_ sender: Any) {
+        replace(str: "j", char: "j")
+    }
+    
+    @IBAction func kButtonPressed(_ sender: Any) {
+        replace(str: "k", char: "k")
+    }
+    
+    @IBAction func lButtonPressed(_ sender: Any) {
+        replace(str: "l", char: "l")
+    }
+    
+    @IBAction func mButtonPressed(_ sender: Any) {
+        replace(str: "m", char: "m")
+    }
+    
+    @IBAction func nButtonPressed(_ sender: Any) {
+        replace(str: "n", char: "n")
+    }
+    
+    @IBAction func oButtonPressed(_ sender: Any) {
+        replace(str: "o", char: "o")
+    }
+    
+    @IBAction func pButtonPressed(_ sender: Any) {
+        replace(str: "p", char: "p")    }
+    
+    @IBAction func qButtonPressed(_ sender: Any) {
+        replace(str: "q", char: "q")
+    }
+    
+    @IBAction func rButtonPressed(_ sender: Any) {
+        replace(str: "r", char: "r")
+    }
+    
+    @IBAction func sButtonPressed(_ sender: Any) {
+        replace(str: "s", char: "s")
+    }
+    
+    @IBAction func tButtonPressed(_ sender: Any) {
+        replace(str: "t", char: "t")
+    }
+    
+    @IBAction func uButtonPressed(_ sender: Any) {
+        replace(str: "u", char: "u")
+    }
+    
+    @IBAction func vButtonPressed(_ sender: Any) {
+        replace(str: "v", char: "v")
+    }
+    
+    @IBAction func wButtonPressed(_ sender: Any) {
+        replace(str: "w", char: "w")
+    }
+    
+    @IBAction func xButtonPressed(_ sender: Any) {
+        replace(str: "x", char: "x")
+    }
+    
+    @IBAction func yButtonPressed(_ sender: Any) {
+        replace(str: "y", char: "y")
+    }
+    
+    @IBAction func zButtonPressed(_ sender: Any) {
+        replace(str: "z", char: "z")
     }
 }

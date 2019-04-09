@@ -35,28 +35,34 @@ extension UIView {
 class PersonViewController: UIViewController {
     
     @IBOutlet var leftLeg: UIView!
+    @IBOutlet var rightLeg: UIView!
+    @IBOutlet var leftArm: UIView!
+    @IBOutlet var rightArm: UIView!
+    @IBOutlet var personView: UIView!
+    @IBOutlet var body: UIView!
     
     func drawHead(){
         let circleView = CircleView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-        view.addSubview(circleView)
-        print(view.frame.width)
-        print(view.frame.width/2)
+        personView.addSubview(circleView)
+    }
+    
+    func setArmsAndLegs(){
+        leftLeg.setAnchorPoint(CGPoint(x: 1, y: 0))
+        rightLeg.setAnchorPoint(CGPoint(x: 0, y: 0))
+        leftArm.setAnchorPoint(CGPoint(x: 1, y: 1))
+        rightArm.setAnchorPoint(CGPoint(x: 0, y: 1))
+        self.leftLeg.transform = CGAffineTransform(rotationAngle: .pi / 4)
+        self.rightLeg.transform = CGAffineTransform(rotationAngle: (.pi / -4))
+        self.leftArm.transform = CGAffineTransform(rotationAngle: (.pi / -4))
+        self.rightArm.transform = CGAffineTransform(rotationAngle: (.pi / 4))
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         drawHead()
-        leftLeg.setAnchorPoint(CGPoint(x: 0.5, y: 1))
+        setArmsAndLegs()
     }
-    
-    @IBAction func rotate(_ sender: Any) {
-        UIView.animate(withDuration: 3) {
-            self.leftLeg.transform = CGAffineTransform(rotationAngle: .pi / 4)
-        }
-
-    }
-    
 
     
 

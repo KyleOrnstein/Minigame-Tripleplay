@@ -10,12 +10,13 @@ import UIKit
 
 class GallowsViewController: UIViewController {
     @IBOutlet var nooseLabel: UILabel!
-    
-    
+    @IBOutlet var personView: UIView!
+    @IBOutlet var gallowsView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        gallowsView.addSubview(personView)
     }
 
 
