@@ -16,7 +16,34 @@ class HangmanViewController: UIViewController {
     @IBOutlet var verticalConstraint: NSLayoutConstraint!
     @IBOutlet var wordLabel: UILabel!
     @IBOutlet var gallowsView: UIView!
+    @IBOutlet var abutton: UIButton!
+    @IBOutlet var bbutton: UIButton!
+    @IBOutlet var cbutton: UIButton!
+    @IBOutlet var dbutton: UIButton!
+    @IBOutlet var ebutton: UIButton!
+    @IBOutlet var fbutton: UIButton!
+    @IBOutlet var gbutton: UIButton!
+    @IBOutlet var hbutton: UIButton!
+    @IBOutlet var ibutton: UIButton!
+    @IBOutlet var jbutton: UIButton!
+    @IBOutlet var kbutton: UIButton!
+    @IBOutlet var lbutton: UIButton!
+    @IBOutlet var mbutton: UIButton!
+    @IBOutlet var nbutton: UIButton!
+    @IBOutlet var obutton: UIButton!
+    @IBOutlet var pbutton: UIButton!
+    @IBOutlet var qbutton: UIButton!
+    @IBOutlet var rbutton: UIButton!
+    @IBOutlet var sbutton: UIButton!
+    @IBOutlet var tbutton: UIButton!
+    @IBOutlet var ubutton: UIButton!
+    @IBOutlet var vbutton: UIButton!
+    @IBOutlet var wbutton: UIButton!
+    @IBOutlet var xbutton: UIButton!
+    @IBOutlet var ybutton: UIButton!
+    @IBOutlet var zbutton: UIButton!
     
+    var vc = GallowsViewController()
     var word: String?
     var replacingArr: String? = "_"
     var wrongs = 0
@@ -106,21 +133,6 @@ class HangmanViewController: UIViewController {
                     "word", "work", "worm", "wound", "writing", "wrong", "year", "yellow", "yes", "yesterday", "you",
                     "young"]
     
-    func winAnimations(){
-        print("won")
-        UIView.animate(withDuration: 2, delay: 0.0, options:[], animations: {
-            self.wordLabel.alpha = 0.0
-        }, completion: {
-            finished in
-            if finished {
-                self.wordLabel.text = "You Win the Game!"
-                UIView.animate(withDuration: 2, animations: {
-                    self.wordLabel.alpha = 1.0
-                })
-            }
-        })
-    }
-    
     func indicesOf(string: String, substring: Character) -> [Int]{
         var indices1 = [Int]()
         var index = string.startIndex
@@ -145,8 +157,207 @@ class HangmanViewController: UIViewController {
         return str
     }
     
+    func buttonDisappear(str: String){
+        switch str {
+        case "a":
+            abutton.alpha = 0.1
+            abutton.isEnabled = false
+            break
+        case "b":
+            bbutton.alpha = 0.1
+            bbutton.isEnabled = false
+            break
+        case "c":
+            cbutton.alpha = 0.1
+            cbutton.isEnabled = false
+            break
+        case "d":
+            dbutton.alpha = 0.1
+            dbutton.isEnabled = false
+            break
+        case "e":
+            ebutton.alpha = 0.1
+            ebutton.isEnabled = false
+            break
+        case "f":
+            fbutton.alpha = 0.1
+            fbutton.isEnabled = false
+            break
+        case "g":
+            gbutton.alpha = 0.1
+            gbutton.isEnabled = false
+            break
+        case "h":
+            hbutton.alpha = 0.1
+            hbutton.isEnabled = false
+            break
+        case "i":
+            ibutton.alpha = 0.1
+            ibutton.isEnabled = false
+            break
+        case "j":
+            jbutton.alpha = 0.1
+            jbutton.isEnabled = false
+            break
+        case "k":
+            kbutton.alpha = 0.1
+            kbutton.isEnabled = false
+            break
+        case "l":
+            lbutton.alpha = 0.1
+            lbutton.isEnabled = false
+            break
+        case "m":
+            mbutton.alpha = 0.1
+            mbutton.isEnabled = false
+            break
+        case "n":
+            nbutton.alpha = 0.1
+            nbutton.isEnabled = false
+            break
+        case "o":
+            obutton.alpha = 0.1
+            obutton.isEnabled = false
+            break
+        case "p":
+            pbutton.alpha = 0.1
+            pbutton.isEnabled = false
+            break
+        case "q":
+            qbutton.alpha = 0.1
+            qbutton.isEnabled = false
+            break
+        case "r":
+            rbutton.alpha = 0.1
+            rbutton.isEnabled = false
+            break
+        case "s":
+            sbutton.alpha = 0.1
+            sbutton.isEnabled = false
+            break
+        case "t":
+            tbutton.alpha = 0.1
+            tbutton.isEnabled = false
+            break
+        case "u":
+            ubutton.alpha = 0.1
+            ubutton.isEnabled = false
+            break
+        case "v":
+            vbutton.alpha = 0.1
+            vbutton.isEnabled = false
+            break
+        case "w":
+            wbutton.alpha = 0.1
+            wbutton.isEnabled = false
+            break
+        case "x":
+            xbutton.alpha = 0.1
+            xbutton.isEnabled = false
+            break
+        case "y":
+            ybutton.alpha = 0.1
+            ybutton.isEnabled = false
+            break
+        case "z":
+            zbutton.alpha = 0.1
+            zbutton.isEnabled = false
+            break
+        default:
+            break
+        }
+    }
+    
+    func buttonsReappear(){
+        self.abutton.alpha = 1
+        self.bbutton.alpha = 1
+        self.cbutton.alpha = 1
+        self.dbutton.alpha = 1
+        self.ebutton.alpha = 1
+        self.fbutton.alpha = 1
+        self.gbutton.alpha = 1
+        self.hbutton.alpha = 1
+        self.ibutton.alpha = 1
+        self.jbutton.alpha = 1
+        self.kbutton.alpha = 1
+        self.lbutton.alpha = 1
+        self.mbutton.alpha = 1
+        self.nbutton.alpha = 1
+        self.obutton.alpha = 1
+        self.pbutton.alpha = 1
+        self.qbutton.alpha = 1
+        self.rbutton.alpha = 1
+        self.sbutton.alpha = 1
+        self.tbutton.alpha = 1
+        self.ubutton.alpha = 1
+        self.vbutton.alpha = 1
+        self.wbutton.alpha = 1
+        self.xbutton.alpha = 1
+        self.ybutton.alpha = 1
+        self.zbutton.alpha = 1
+    }
+    
+    func disableAllButtons(){
+        abutton.isEnabled = false
+        bbutton.isEnabled = false
+        cbutton.isEnabled = false
+        dbutton.isEnabled = false
+        ebutton.isEnabled = false
+        fbutton.isEnabled = false
+        gbutton.isEnabled = false
+        hbutton.isEnabled = false
+        ibutton.isEnabled = false
+        jbutton.isEnabled = false
+        kbutton.isEnabled = false
+        lbutton.isEnabled = false
+        mbutton.isEnabled = false
+        nbutton.isEnabled = false
+        obutton.isEnabled = false
+        pbutton.isEnabled = false
+        qbutton.isEnabled = false
+        rbutton.isEnabled = false
+        sbutton.isEnabled = false
+        tbutton.isEnabled = false
+        ubutton.isEnabled = false
+        vbutton.isEnabled = false
+        wbutton.isEnabled = false
+        xbutton.isEnabled = false
+        ybutton.isEnabled = false
+        zbutton.isEnabled = false
+    }
+    
+    func reenableButtons(){
+        abutton.isEnabled = true
+        bbutton.isEnabled = true
+        cbutton.isEnabled = true
+        dbutton.isEnabled = true
+        ebutton.isEnabled = true
+        fbutton.isEnabled = true
+        gbutton.isEnabled = true
+        hbutton.isEnabled = true
+        ibutton.isEnabled = true
+        jbutton.isEnabled = true
+        kbutton.isEnabled = true
+        lbutton.isEnabled = true
+        mbutton.isEnabled = true
+        nbutton.isEnabled = true
+        obutton.isEnabled = true
+        pbutton.isEnabled = true
+        qbutton.isEnabled = true
+        rbutton.isEnabled = true
+        sbutton.isEnabled = true
+        tbutton.isEnabled = true
+        ubutton.isEnabled = true
+        vbutton.isEnabled = true
+        wbutton.isEnabled = true
+        xbutton.isEnabled = true
+        ybutton.isEnabled = true
+        zbutton.isEnabled = true
+    }
+    
     func replace(str: String, char: Character){
         if let w = word{
+            buttonDisappear(str: str)
             if w.contains(char){
                 let placesReplace = indicesOf(string: w, substring: char)
                 print(placesReplace)
@@ -176,8 +387,45 @@ class HangmanViewController: UIViewController {
                 }
             }
             else{
-                wrongs += 1
+                wrongsAnimations()
             }
+        }
+    }
+    
+    func winAnimations(){
+        print("won")
+        disableAllButtons()
+        UIView.animate(withDuration: 2, delay: 0.5, options:[], animations: {
+            self.wordLabel.alpha = 0.0
+            self.buttonsReappear()
+        }, completion: {
+            finished in
+            if finished {
+                self.wordLabel.text = "You Win the Game!"
+                UIView.animate(withDuration: 2, animations: {
+                    self.wordLabel.alpha = 1.0
+                })
+            }
+        })
+    }
+    
+    func wrongsAnimations(){
+        wrongs += 1
+        if wrongs == 6{
+            print("lost")
+            disableAllButtons()
+            UIView.animate(withDuration: 2, delay: 0.5, options:[], animations: {
+                self.wordLabel.alpha = 0.0
+                self.buttonsReappear()
+            }, completion: {
+                finished in
+                if finished {
+                    self.wordLabel.text = "You lost the Game!"
+                    UIView.animate(withDuration: 2, animations: {
+                        self.wordLabel.alpha = 1.0
+                    })
+                }
+            })
         }
     }
     
@@ -191,6 +439,7 @@ class HangmanViewController: UIViewController {
         print(wrongs)
         word = wordList[Int(arc4random_uniform(UInt32(wordList.count)))]
         replacingArr = ""
+        reenableButtons()
         if let w = word{
             var count = 0
             while count != w.count{
@@ -205,9 +454,7 @@ class HangmanViewController: UIViewController {
             print(r)
         }
     }
-    
-    //text has speces in it to get the correct string use
-    //r.replacingOccurrences(of: " ", with: "", options:.literal, range: nil)
+
     @IBAction func aButtonPressed(_ sender: Any) {
         replace(str: "a", char: "a")
     }

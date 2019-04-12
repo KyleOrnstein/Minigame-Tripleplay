@@ -12,11 +12,13 @@ class GallowsViewController: UIViewController {
     @IBOutlet var nooseLabel: UILabel!
     @IBOutlet var personView: UIView!
     @IBOutlet var gallowsView: UIView!
+    @IBOutlet var bottomLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         gallowsView.addSubview(personView)
+        print(bottomLabel.text)
     }
 
 

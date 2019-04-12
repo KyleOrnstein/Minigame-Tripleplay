@@ -279,7 +279,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qfq-bi-kns">
                                 <rect key="frame" x="0.0" y="64" width="375" height="412"/>
                                 <connections>
-                                    <segue destination="1dA-z8-Hf6" kind="embed" id="8pm-7y-BWc"/>
+                                    <segue destination="1dA-z8-Hf6" kind="embed" identifier="gallows" id="8pm-7y-BWc"/>
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVw-BO-b8e">
@@ -331,12 +331,38 @@
                     <tabBarItem key="tabBarItem" title="HangMan" id="bYf-zg-7LN"/>
                     <connections>
                         <outlet property="aToi" destination="Lci-vL-M84" id="oUr-Zq-jte"/>
+                        <outlet property="abutton" destination="BNT-Wp-2fA" id="B1N-7y-XhB"/>
+                        <outlet property="bbutton" destination="ciy-fb-QGQ" id="cQI-rJ-o95"/>
+                        <outlet property="cbutton" destination="kap-2S-PXw" id="pUB-h5-XyW"/>
+                        <outlet property="dbutton" destination="uAk-hZ-aod" id="GiG-qH-RWv"/>
+                        <outlet property="ebutton" destination="Zrm-QH-NAC" id="25T-1r-ml3"/>
+                        <outlet property="fbutton" destination="ZC6-wG-5bp" id="HoZ-xL-9ZB"/>
                         <outlet property="gallowsView" destination="qfq-bi-kns" id="5ei-9D-dhR"/>
+                        <outlet property="gbutton" destination="UjK-dv-56W" id="aW1-q5-1eB"/>
                         <outlet property="hangmanLabel" destination="uiZ-in-nvN" id="QR8-E8-pZP"/>
+                        <outlet property="hbutton" destination="FUu-ne-tsx" id="FQd-cP-yTv"/>
+                        <outlet property="ibutton" destination="Jxd-Fg-Sdx" id="OxK-vk-WPi"/>
                         <outlet property="jTor" destination="TIm-e0-hki" id="ezI-N5-mi1"/>
+                        <outlet property="jbutton" destination="EGH-I5-Vut" id="yYJ-TL-jHL"/>
+                        <outlet property="kbutton" destination="Y7g-e0-T73" id="sF1-Ic-cd3"/>
+                        <outlet property="lbutton" destination="gnx-oV-yck" id="wQz-bX-y2T"/>
+                        <outlet property="mbutton" destination="pqH-7U-78c" id="3ZT-3x-7Yh"/>
+                        <outlet property="nbutton" destination="rL2-h3-GLv" id="Udt-oc-hFF"/>
+                        <outlet property="obutton" destination="fIa-SE-UlN" id="Khw-6Y-GXK"/>
+                        <outlet property="pbutton" destination="IRC-qc-yzO" id="jLO-As-LVd"/>
+                        <outlet property="qbutton" destination="yuk-hf-AUF" id="cV5-JX-xd4"/>
+                        <outlet property="rbutton" destination="h5O-JR-Xav" id="e71-56-sIX"/>
                         <outlet property="sToz" destination="6SK-rQ-OSP" id="V6d-nG-z0t"/>
+                        <outlet property="sbutton" destination="fCQ-rZ-k5c" id="rna-ts-iNh"/>
+                        <outlet property="tbutton" destination="3qh-wY-8R9" id="OFS-u1-yct"/>
+                        <outlet property="ubutton" destination="rNK-xO-Chn" id="uxu-bM-OgN"/>
+                        <outlet property="vbutton" destination="cdp-tn-QDG" id="cE3-We-C28"/>
                         <outlet property="verticalConstraint" destination="Pdl-0F-Ad1" id="6Pm-ME-JRf"/>
+                        <outlet property="wbutton" destination="QgI-JE-5xi" id="y78-cf-jcu"/>
                         <outlet property="wordLabel" destination="xVw-BO-b8e" id="QQK-qX-wX8"/>
+                        <outlet property="xbutton" destination="wio-Wy-TGq" id="KzD-GT-x9d"/>
+                        <outlet property="ybutton" destination="QxO-gI-qBF" id="Cq7-MP-Aef"/>
+                        <outlet property="zbutton" destination="X4i-EY-yx9" id="EJp-Iq-p9d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CDB-7R-Rxw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -414,27 +440,27 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czk-2a-b9D">
                                 <rect key="frame" x="89" y="50" width="111" height="127"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="127" id="v5m-dA-9Hw"/>
-                                </constraints>
                                 <connections>
-                                    <segue destination="lHC-PV-fkd" kind="embed" id="eNB-Zi-JVn"/>
+                                    <segue destination="lHC-PV-fkd" kind="embed" identifier="hangedMan" id="eNB-Zi-JVn"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="czk-2a-b9D" firstAttribute="bottom" secondItem="H8d-7Q-VQU" secondAttribute="bottom" constant="127" id="14j-DU-Nts"/>
                             <constraint firstItem="H8d-7Q-VQU" firstAttribute="leading" secondItem="JQR-qC-Jvb" secondAttribute="leading" id="Amo-kF-H9J"/>
                             <constraint firstItem="czk-2a-b9D" firstAttribute="top" secondItem="H8d-7Q-VQU" secondAttribute="bottom" id="BYM-0Y-sgc"/>
                             <constraint firstItem="Y1Y-W1-ihu" firstAttribute="top" secondItem="O4u-H9-ff9" secondAttribute="bottom" id="Bci-Zr-M8K"/>
                             <constraint firstItem="Y1Y-W1-ihu" firstAttribute="centerX" secondItem="MbO-m1-Ddj" secondAttribute="centerX" id="Cdx-9U-sOv"/>
                             <constraint firstItem="czk-2a-b9D" firstAttribute="centerX" secondItem="H8d-7Q-VQU" secondAttribute="centerX" id="MQd-Ng-1Gh"/>
+                            <constraint firstItem="Y1Y-W1-ihu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="czk-2a-b9D" secondAttribute="bottom" id="QAR-vU-tbw"/>
                             <constraint firstItem="O4u-H9-ff9" firstAttribute="leading" secondItem="JQR-qC-Jvb" secondAttribute="trailing" id="RC5-cb-2T0"/>
                             <constraint firstItem="czk-2a-b9D" firstAttribute="leading" secondItem="MbO-m1-Ddj" secondAttribute="leading" constant="89" id="RU1-Tj-rYQ"/>
                             <constraint firstItem="Y1Y-W1-ihu" firstAttribute="width" secondItem="MbO-m1-Ddj" secondAttribute="width" id="ckK-7C-cNR"/>
                             <constraint firstItem="JQR-qC-Jvb" firstAttribute="top" secondItem="MbO-m1-Ddj" secondAttribute="top" id="cyp-Mb-ZPI"/>
                             <constraint firstItem="JQR-qC-Jvb" firstAttribute="leading" secondItem="MbO-m1-Ddj" secondAttribute="leading" constant="142" id="dFI-zv-oYJ"/>
                             <constraint firstItem="H8d-7Q-VQU" firstAttribute="top" secondItem="JQR-qC-Jvb" secondAttribute="top" id="de5-Ji-9JT"/>
+                            <constraint firstItem="czk-2a-b9D" firstAttribute="top" secondItem="H8d-7Q-VQU" secondAttribute="bottom" id="kSF-xV-YBp"/>
                             <constraint firstItem="O4u-H9-ff9" firstAttribute="top" secondItem="MbO-m1-Ddj" secondAttribute="top" id="rK2-nH-Uve"/>
                             <constraint firstAttribute="trailing" secondItem="O4u-H9-ff9" secondAttribute="trailing" constant="60" id="z50-D6-DSA"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Y1Y-W1-ihu" secondAttribute="bottom" id="zBu-jJ-byY"/>
@@ -442,6 +468,7 @@
                         <viewLayoutGuide key="safeArea" id="G5F-LO-KJ4"/>
                     </view>
                     <connections>
+                        <outlet property="bottomLabel" destination="Y1Y-W1-ihu" id="yWd-gd-Bpr"/>
                         <outlet property="gallowsView" destination="MbO-m1-Ddj" id="NeB-ND-oL6"/>
                         <outlet property="nooseLabel" destination="H8d-7Q-VQU" id="tgh-op-g0X"/>
                         <outlet property="personView" destination="czk-2a-b9D" id="mwz-II-byc"/>
@@ -463,6 +490,7 @@
                                 <rect key="frame" x="45" y="78" width="10" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" identifier="LeftLeg"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1qR-ek-Vbr">
                                 <rect key="frame" x="55" y="78" width="10" height="49"/>

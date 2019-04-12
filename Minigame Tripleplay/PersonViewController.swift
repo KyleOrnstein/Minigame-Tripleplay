@@ -40,9 +40,10 @@ class PersonViewController: UIViewController {
     @IBOutlet var rightArm: UIView!
     @IBOutlet var personView: UIView!
     @IBOutlet var body: UIView!
+    var wrongs = 0
     
     func drawHead(){
-        let circleView = CircleView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        let circleView = CircleView(frame: CGRect(x: personView.frame.width/2, y: 0, width: 40, height: 40))
         personView.addSubview(circleView)
     }
     
@@ -55,6 +56,11 @@ class PersonViewController: UIViewController {
         self.rightLeg.transform = CGAffineTransform(rotationAngle: (.pi / -4))
         self.leftArm.transform = CGAffineTransform(rotationAngle: (.pi / -4))
         self.rightArm.transform = CGAffineTransform(rotationAngle: (.pi / 4))
+        self.leftArm.alpha = 0
+        self.leftLeg.alpha = 0
+        self.rightArm.alpha = 0
+        self.rightLeg.alpha = 0
+        self.body.alpha = 0
     }
     
     override func viewDidLoad() {
@@ -62,6 +68,7 @@ class PersonViewController: UIViewController {
         // Do any additional setup after loading the view.
         drawHead()
         setArmsAndLegs()
+        print("persons wrongs = " + String(wrongs))
     }
 
     
