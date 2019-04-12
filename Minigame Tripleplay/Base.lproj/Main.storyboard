@@ -291,6 +291,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JK-dA-aSq">
                                 <rect key="frame" x="0.0" y="23" width="125" height="30"/>
                                 <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetButton:" destination="7px-dk-kAc" eventType="touchUpInside" id="Yie-hZ-fJ7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXr-lc-FyX">
                                 <rect key="frame" x="250.5" y="23" width="124.5" height="30"/>

@@ -43,7 +43,6 @@ class HangmanViewController: UIViewController {
     @IBOutlet var ybutton: UIButton!
     @IBOutlet var zbutton: UIButton!
     
-    var vc = GallowsViewController()
     var word: String?
     var replacingArr: String? = "_"
     var wrongs = 0
@@ -453,6 +452,13 @@ class HangmanViewController: UIViewController {
             wordLabel.text = spacedR
             print(r)
         }
+    }
+    
+    @IBAction func resetButton(_ sender: Any) {
+        reenableButtons()
+        buttonsReappear()
+        wordLabel.text = "word"
+        wrongs = 0
     }
 
     @IBAction func aButtonPressed(_ sender: Any) {
