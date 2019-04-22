@@ -428,6 +428,15 @@ class HangmanViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "hangedMan" {
+            if let pvc = segue.destination as? PersonViewController {
+                pvc.wrongs = wrongs
+            }
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         verticalConstraint.constant = 0

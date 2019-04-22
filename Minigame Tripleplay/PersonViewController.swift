@@ -63,12 +63,36 @@ class PersonViewController: UIViewController {
         self.body.alpha = 0
     }
     
+    func addBodyPart(){
+        switch wrongs {
+        case 1:
+            drawHead()
+            break
+        case 2:
+            self.body.alpha = 1
+            break
+        case 3:
+            leftArm.alpha = 1
+            break
+        case 4:
+            rightArm.alpha = 1
+            break
+        case 5:
+            leftLeg.alpha = 1
+            break
+        case 6:
+            rightLeg.alpha = 1
+            break
+        default:
+            break
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        drawHead()
         setArmsAndLegs()
-        print("persons wrongs = " + String(wrongs))
+        addBodyPart()
     }
 
     

@@ -18,7 +18,6 @@ class GallowsViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         gallowsView.addSubview(personView)
-        print(bottomLabel.text)
     }
 
 
