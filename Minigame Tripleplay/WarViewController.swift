@@ -6,11 +6,24 @@
 //  Copyright © 2019 Kyle Ornstein. All rights reserved.
 //
 
+
 import UIKit
 
 class WarViewController: UIViewController {
+    
+    
+    //Things needed to do
+    //figure out disabling button during animation
+    //put pictures in to so cards show what was played
+    
+    
+    
+    
     @IBOutlet var computerButton: UIButton!
     @IBOutlet var userButton: UIButton!
+    @IBOutlet var midLabel: UILabel!
+    @IBOutlet var compCardCount: UILabel!
+    @IBOutlet var userCardCount: UILabel!
     
     var userDeck = [String]()
     var compDeck = [String]()
@@ -24,12 +37,41 @@ class WarViewController: UIViewController {
     var compCard = ""
     var userCard = ""
     var outcome = ""
+    var started = false
+    
+    func updateCount(){
+        userCardCount.text = "Users Cards: " + String(userDeck.count)
+        compCardCount.text = "Computers Cards: " + String(compDeck.count)
+    }
+    
+    func refillDeck(){
+        if fullDeck.count != 52{
+            if userDeck.count > 0 {
+                currentCard = userDeck[Int(arc4random_uniform(UInt32(userDeck.count)))]
+                while userDeck.count != 0{
+                    currentCard = userDeck[Int(arc4random_uniform(UInt32(userDeck.count)))]
+                    if let itemToRemoveIndex = userDeck.index(of: currentCard) {
+                            userDeck.remove(at: itemToRemoveIndex)
+                            fullDeck.append(currentCard)
+                    }
+                }
+            }
+            if compDeck.count > 0 {
+                currentCard = compDeck[Int(arc4random_uniform(UInt32(compDeck.count)))]
+                while compDeck.count != 0{
+                    currentCard = compDeck[Int(arc4random_uniform(UInt32(compDeck.count)))]
+                    if let itemToRemoveIndex = compDeck.index(of: currentCard) {
+                        compDeck.remove(at: itemToRemoveIndex)
+                        fullDeck.append(currentCard)
+                    }
+                }
+            }
+        }
+    }
     
     func fillDecks(){
-        currentCard = ""
         currentCard = fullDeck[Int(arc4random_uniform(UInt32(fullDeck.count)))]
-        var count = 0
-        while count != 26{
+        while fullDeck.count != 26{
             currentCard = fullDeck[Int(arc4random_uniform(UInt32(fullDeck.count)))]
             while fullDeck.contains(currentCard) {
                 if let itemToRemoveIndex = fullDeck.index(of: currentCard) {
@@ -37,19 +79,14 @@ class WarViewController: UIViewController {
                     userDeck.append(currentCard)
                 }
             }
-            count += 1
         }
         
-        count = 0
-        while count != 26{
+        while fullDeck.count != 0{
             currentCard = fullDeck[Int(arc4random_uniform(UInt32(fullDeck.count)))]
-            while fullDeck.contains(currentCard) {
-                if let itemToRemoveIndex = fullDeck.index(of: currentCard) {
-                    fullDeck.remove(at: itemToRemoveIndex)
-                    compDeck.append(currentCard)
-                }
+            if let itemToRemoveIndex = fullDeck.index(of: currentCard) {
+                fullDeck.remove(at: itemToRemoveIndex)
+                compDeck.append(currentCard)
             }
-            count += 1
         }
     }
     
@@ -112,7 +149,35 @@ class WarViewController: UIViewController {
         }
     }
     
+    func midLabelAnimation(which: String){
+        if which == "war"{
+            UIView.animate(withDuration: 2, delay: 0.0, options:[], animations: {
+                self.midLabel.alpha = 1
+                self.midLabel.transform = .identity
+            }, completion: {
+                finished in
+                UIView.animate(withDuration: 2, animations: {
+                    self.midLabel.transform = CGAffineTransform(scaleX: 0.4, y: 0.4)
+                    self.midLabel.alpha = 0
+                })
+            })
+        }
+        else if which == "userWins"{
+            midLabel.text = "User wins"
+            UIView.animate(withDuration: 2, animations: {
+                self.midLabel.alpha = 1
+            })
+        }
+        else{
+            midLabel.text = "Computer wins"
+            UIView.animate(withDuration: 2, animations: {
+                self.midLabel.alpha = 1
+            })
+        }
+    }
+    
     func war(outcomes: String) -> String{
+        midLabelAnimation(which: "war")
         outcome = outcomes
         while outcome == "war"{
             checked = checkForWin(check: checked)
@@ -137,11 +202,16 @@ class WarViewController: UIViewController {
     }
     
     func checkForWin(check: String) -> String{
+        updateCount()
         if check == "noWin"{
             if userDeck.isEmpty{
+                midLabelAnimation(which: "compWins")
+                updateCount()
                 return "compWins"
             }
             else if compDeck.isEmpty {
+                midLabelAnimation(which: "userWins")
+                updateCount()
                 return "userWins"
             }
             else {
@@ -156,6 +226,7 @@ class WarViewController: UIViewController {
         checked = checkForWin(check: checked)
         if checked != "noWin"{
             print("win")
+            started = false
         }
         else{
             var count = 0
@@ -188,6 +259,7 @@ class WarViewController: UIViewController {
                     playedCards.append(userCard)
                     playedCards.append(compCard)
                 }
+               
                 outcome = war(outcomes: "war")
                 count = playedCards.count
                 while count != 0{
@@ -207,18 +279,33 @@ class WarViewController: UIViewController {
             print(userDeck)
             print(compDeck)
         }
+        updateCount()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        midLabel.alpha = 0
+        midLabel.transform = CGAffineTransform(scaleX: 0.4, y: 0.4)
     }
     
     @IBAction func playNow(_ sender: Any) {
+        midLabel.text = "War"
+        checked = "noWin"
+        refillDeck()
         fillDecks()
+        updateCount()
+        started = true
     }
 
     @IBAction func userPlayButton(_ sender: Any) {
-        play()
+        if started == true{
+            play()
+        }
     }
     
+    @IBAction func testButton(_ sender: Any) {
+        while started == true{
+            play()
+        }
+    }
 }
