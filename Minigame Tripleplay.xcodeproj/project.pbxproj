@@ -27,7 +27,6 @@
 		03184D22224C20C8008352D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03184D24224C20C9008352D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03184D27224C20C9008352D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		03184D29224C20C9008352D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03184D33224D45E0008352D4 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		03184D35224D4A34008352D4 /* HangmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanViewController.swift; sourceTree = "<group>"; };
 		03184D37224D4A51008352D4 /* WarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarViewController.swift; sourceTree = "<group>"; };
@@ -77,7 +76,6 @@
 				03184D33224D45E0008352D4 /* CircleView.swift */,
 				03184D24224C20C9008352D4 /* Assets.xcassets */,
 				03184D26224C20C9008352D4 /* LaunchScreen.storyboard */,
-				03184D29224C20C9008352D4 /* Info.plist */,
 			);
 			path = "Minigame Tripleplay";
 			sourceTree = "<group>";

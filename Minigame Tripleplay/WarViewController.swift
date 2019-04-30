@@ -14,12 +14,10 @@ class WarViewController: UIViewController {
     
     //Things needed to do
     //figure out disabling button during animation
-    //put pictures in to so cards show what was played
+    //put in contraints for cards
+    //(card height should be half the distance from title to bottom of safe area, width should be half the size of the screen)
     
-    
-    
-    
-    @IBOutlet var computerButton: UIButton!
+    @IBOutlet var compButton: UIButton!
     @IBOutlet var userButton: UIButton!
     @IBOutlet var midLabel: UILabel!
     @IBOutlet var compCardCount: UILabel!
@@ -232,6 +230,8 @@ class WarViewController: UIViewController {
             var count = 0
             userCard = userDeck[Int(arc4random_uniform(UInt32(userDeck.count)))]
             compCard = compDeck[Int(arc4random_uniform(UInt32(compDeck.count)))]
+            userButton.setImage(UIImage(named: userCard), for: .normal)
+            compButton.setImage(UIImage(named: compCard), for: .normal)
             outcome = compareCards(user: userCard, comp: compCard)
             print(userCard)
             print(compCard)
