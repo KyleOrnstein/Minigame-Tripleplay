@@ -16,6 +16,9 @@ class TicTacToeViewController: UIViewController{
         
     }
 
-
+    @IBAction func seeScores(_ sender: Any) {
+        performSegue(withIdentifier: "seeScoresT", sender: nil)
+    }
+    
 }
 

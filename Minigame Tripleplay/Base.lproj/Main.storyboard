@@ -44,8 +44,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vq-VA-KRs">
-                                <rect key="frame" x="0.0" y="64" width="72" height="30"/>
-                                <state key="normal" title="seeScores"/>
+                                <rect key="frame" x="0.0" y="64" width="78" height="30"/>
+                                <state key="normal" title="See Scores"/>
                                 <connections>
                                     <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A8N-cz-09i"/>
                                     <segue destination="QNf-Lo-pv1" kind="show" identifier="seeScoresW" id="BLe-dW-9SE"/>
@@ -126,10 +126,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="God-dx-OYz">
-                                <rect key="frame" x="0.0" y="64" width="72" height="30"/>
-                                <state key="normal" title="seeScores"/>
+                                <rect key="frame" x="0.0" y="64" width="78" height="30"/>
+                                <state key="normal" title="See Scores"/>
                                 <connections>
                                     <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kTL-Zx-4gt"/>
+                                    <action selector="seeScores:" destination="uOE-5G-TSW" eventType="touchUpInside" id="krf-rH-Sal"/>
+                                    <segue destination="QNf-Lo-pv1" kind="show" identifier="seeScoresT" id="ycE-tX-y87"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -463,7 +465,6 @@
         <!--Item-->
         <scene sceneID="DXK-1n-bRK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2lk-kb-cVm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="w0i-Ke-kbb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="hZb-E4-FWn"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MqB-QM-3bw">
@@ -477,6 +478,7 @@
                         <segue destination="pLT-hW-8JP" kind="relationship" relationship="rootViewController" id="zsy-Tf-UmE"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2lk-kb-cVm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="243" y="134"/>
         </scene>
@@ -761,6 +763,6 @@ TRIPLEPLAY</string>
         <image name="Image" width="183" height="275"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="q7Q-c5-Gv9"/>
+        <segue reference="BLe-dW-9SE"/>
     </inferredMetricsTieBreakers>
 </document>
