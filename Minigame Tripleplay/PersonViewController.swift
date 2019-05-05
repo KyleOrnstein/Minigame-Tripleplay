@@ -63,7 +63,7 @@ class PersonViewController: UIViewController {
         self.body.alpha = 0
     }
     
-    func addBodyPart(){
+    func addBodyParts(){
         switch wrongs {
         case 1:
             drawHead()
@@ -92,9 +92,15 @@ class PersonViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setArmsAndLegs()
-        addBodyPart()
+        addBodyParts()
     }
 
-    
+    @IBAction func updateHangedMan (sender: UIStoryboardSegue) {
+        if let controller = sender.source as? HangmanViewController {
+            wrongs = controller.wrongs
+        }
+        print(wrongs)
+        addBodyParts()
+    }
 
 }

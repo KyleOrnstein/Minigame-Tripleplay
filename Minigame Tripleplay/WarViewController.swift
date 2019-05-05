@@ -8,15 +8,14 @@
 
 
 import UIKit
+import CoreData
 
 class WarViewController: UIViewController {
     
-    
     //Things needed to do
     //figure out disabling button during animation
-    //put in contraints for cards
-    //(card height should be half the distance from title to bottom of safe area, width should be half the size of the screen)
     
+    @IBOutlet var warLabel: UILabel!
     @IBOutlet var compButton: UIButton!
     @IBOutlet var userButton: UIButton!
     @IBOutlet var midLabel: UILabel!
@@ -38,8 +37,8 @@ class WarViewController: UIViewController {
     var started = false
     
     func updateCount(){
-        userCardCount.text = "Users Cards: " + String(userDeck.count)
-        compCardCount.text = "Computers Cards: " + String(compDeck.count)
+        userCardCount.text = "User's Cards: " + String(userDeck.count)
+        compCardCount.text = "Computer's Cards: " + String(compDeck.count)
     }
     
     func refillDeck(){
@@ -180,9 +179,11 @@ class WarViewController: UIViewController {
         while outcome == "war"{
             checked = checkForWin(check: checked)
             if userDeck.count < 4 {
+                updateHangman(winner: "comp")
                 return "compWin"
             }
             else if compDeck.count < 4 {
+                updateHangman(winner: "user")
                 return "userWin"
             }
             removeForWar(counts: 3)
@@ -199,17 +200,56 @@ class WarViewController: UIViewController {
         return outcome
     }
     
+    func updateHangman(winner: String){
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest.init(entityName: "Wins")
+        fetchRequest.returnsObjectsAsFaults = false
+        do {
+            let test = try context.fetch(fetchRequest)
+            let object = test[0] as! NSManagedObject
+            if winner == "user"{
+                for data in test as! [NSManagedObject] {
+                    object.setValue(Int(data.value(forKey: "warU") as! Int32) + 1, forKey: "warU")
+                }
+                do {
+                    try context.save()
+                    
+                } catch {
+                    
+                    print("Failed")
+                }
+            }
+            else{
+                for data in test as! [NSManagedObject] {
+                    object.setValue(Int(data.value(forKey: "warC") as! Int32) + 1, forKey: "warC")
+                }
+                do {
+                    try context.save()
+                    
+                } catch {
+                    print("Failed")
+                }
+            }
+        }
+        catch{
+            print("failed")
+        }
+    }
+    
     func checkForWin(check: String) -> String{
         updateCount()
         if check == "noWin"{
             if userDeck.isEmpty{
                 midLabelAnimation(which: "compWins")
                 updateCount()
+                updateHangman(winner: "comp")
                 return "compWins"
             }
             else if compDeck.isEmpty {
                 midLabelAnimation(which: "userWins")
                 updateCount()
+                updateHangman(winner: "user")
                 return "userWins"
             }
             else {
@@ -284,8 +324,17 @@ class WarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let halfWidth = view.frame.width / 2
+        let cardHeight = ((view.frame.size.height / 2) - (warLabel.frame.size.height))/2
+        print(view.frame.size.height/2)
+        print(warLabel.frame.size.height)
+        print(cardHeight)
         midLabel.alpha = 0
         midLabel.transform = CGAffineTransform(scaleX: 0.4, y: 0.4)
+        userButton.widthAnchor.constraint(equalToConstant: halfWidth).isActive = true
+        compButton.widthAnchor.constraint(equalToConstant: halfWidth).isActive = true
+        userButton.heightAnchor.constraint(equalToConstant: cardHeight)
+        compButton.heightAnchor.constraint(equalToConstant: cardHeight)
     }
     
     @IBAction func playNow(_ sender: Any) {
@@ -303,9 +352,7 @@ class WarViewController: UIViewController {
         }
     }
     
-    @IBAction func testButton(_ sender: Any) {
-        while started == true{
-            play()
-        }
+    @IBAction func reset(_ sender: Any) {
+        performSegue(withIdentifier: "seeScoresW", sender: nil)
     }
 }

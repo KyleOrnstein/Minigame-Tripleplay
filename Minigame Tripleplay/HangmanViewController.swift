@@ -7,8 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 class HangmanViewController: UIViewController {
+    
+    //get head to be centered
+    //figure out how to change alpha values of subview
+    //add coredata for victories
+    
     @IBOutlet var hangmanLabel: UILabel!
     @IBOutlet var aToi: UIStackView!
     @IBOutlet var jTor: UIStackView!
@@ -82,7 +88,7 @@ class HangmanViewController: UIViewController {
                     "growth", "guide", "gun", "hair", "hammer", "hand", "hanging", "happy", "harbour", "hard",
                     "harmony", "hat", "hate", "have", "he", "head", "healthy", "hear", "hearing", "heart", "heat",
                     "help", "high", "history", "hole", "hollow", "hook", "hope", "horn", "horse", "hospital", "hour",
-                    "house", "how", "humour", "I", "ice", "idea", "if", "ill", "important", "impulse", "in",
+                    "house", "how", "humour", "ice", "idea", "if", "ill", "important", "impulse", "in",
                     "increase", "industry", "ink", "insect", "instrument", "insurance", "interest", "invention",
                     "iron", "island", "jelly", "jewel", "join", "journey", "judge", "jump", "keep", "kettle", "key",
                     "kick", "kind", "kiss", "knee", "knife", "knot", "knowledge", "land", "language", "last", "late",
@@ -131,6 +137,7 @@ class HangmanViewController: UIViewController {
                     "wind", "window", "wine", "wing", "winter", "wire", "wise", "with", "woman", "wood", "wool",
                     "word", "work", "worm", "wound", "writing", "wrong", "year", "yellow", "yes", "yesterday", "you",
                     "young"]
+
     
     func indicesOf(string: String, substring: Character) -> [Int]{
         var indices1 = [Int]()
@@ -391,8 +398,46 @@ class HangmanViewController: UIViewController {
         }
     }
     
+    func updateHangman(winner: String){
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest.init(entityName: "Wins")
+        fetchRequest.returnsObjectsAsFaults = false
+        do {
+            let test = try context.fetch(fetchRequest)
+            let object = test[0] as! NSManagedObject
+            if winner == "user"{
+                for data in test as! [NSManagedObject] {
+                    object.setValue(Int(data.value(forKey: "hangmanU") as! Int32) + 1, forKey: "hangmanU")
+                }
+                do {
+                try context.save()
+                
+                } catch {
+                
+                print("Failed")
+                }
+            }
+            else{
+                for data in test as! [NSManagedObject] {
+                    object.setValue(Int(data.value(forKey: "hangmanC") as! Int32) + 1, forKey: "hangmanC")
+                }
+                do {
+                    try context.save()
+                    
+                } catch {
+                    print("Failed")
+                }
+            }
+        }
+        catch{
+            print("failed")
+        }
+    }
+    
     func winAnimations(){
         print("won")
+        updateHangman(winner: "user")
         disableAllButtons()
         UIView.animate(withDuration: 2, delay: 0.5, options:[], animations: {
             self.wordLabel.alpha = 0.0
@@ -408,9 +453,20 @@ class HangmanViewController: UIViewController {
         })
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "updateHangedMan"{
+            print("preformed")
+            if let gvc = segue.destination as? GallowsViewController{
+                    gvc.wrongs = wrongs
+            }
+        }
+    }
+    
     func wrongsAnimations(){
         wrongs += 1
+        performSegue(withIdentifier: "updateHangedMan", sender: self)
         if wrongs == 6{
+            updateHangman(winner: "comp")
             print("lost")
             disableAllButtons()
             UIView.animate(withDuration: 2, delay: 0.5, options:[], animations: {
@@ -428,19 +484,11 @@ class HangmanViewController: UIViewController {
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "hangedMan" {
-            if let pvc = segue.destination as? PersonViewController {
-                pvc.wrongs = wrongs
-            }
-        }
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         verticalConstraint.constant = 0
         view.addSubview(gallowsView)
+        
     }
     
     @IBAction func playNow(_ sender: Any) {
@@ -572,4 +620,9 @@ class HangmanViewController: UIViewController {
     @IBAction func zButtonPressed(_ sender: Any) {
         replace(str: "z", char: "z")
     }
+    
+    @IBAction func seeScores(_ sender: Any) {
+        performSegue(withIdentifier: "seeScoresH", sender: nil)
+    }
+    
 }

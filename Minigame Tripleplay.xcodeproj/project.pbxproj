@@ -15,8 +15,12 @@
 		03184D34224D45E0008352D4 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03184D33224D45E0008352D4 /* CircleView.swift */; };
 		03184D36224D4A34008352D4 /* HangmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03184D35224D4A34008352D4 /* HangmanViewController.swift */; };
 		03184D38224D4A51008352D4 /* WarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03184D37224D4A51008352D4 /* WarViewController.swift */; };
+		03BA6C0B227F6845000E4CC8 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA6C0A227F6845000E4CC8 /* StartGameViewController.swift */; };
+		03BA6C0D227F6DA5000E4CC8 /* SeeScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA6C0C227F6DA5000E4CC8 /* SeeScoresViewController.swift */; };
+		03BA6C2E227F79E8000E4CC8 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03BA6C2C227F79E8000E4CC8 /* Model.xcdatamodeld */; };
+		03BA6C34227F7B10000E4CC8 /* Wins+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA6C33227F7B10000E4CC8 /* Wins+CoreDataProperties.swift */; };
+		03BA6C36227F7B34000E4CC8 /* Wins+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA6C35227F7B34000E4CC8 /* Wins+CoreDataClass.swift */; };
 		03C90B8022551A8C000E450F /* GallowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C90B7F22551A8C000E450F /* GallowsViewController.swift */; };
-		03C90B822255205E000E450F /* RectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C90B812255205E000E450F /* RectView.swift */; };
 		03C90B8422566B69000E450F /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C90B8322566B69000E450F /* PersonViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,8 +34,12 @@
 		03184D33224D45E0008352D4 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		03184D35224D4A34008352D4 /* HangmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanViewController.swift; sourceTree = "<group>"; };
 		03184D37224D4A51008352D4 /* WarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarViewController.swift; sourceTree = "<group>"; };
+		03BA6C0A227F6845000E4CC8 /* StartGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
+		03BA6C0C227F6DA5000E4CC8 /* SeeScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeScoresViewController.swift; sourceTree = "<group>"; };
+		03BA6C2D227F79E8000E4CC8 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		03BA6C33227F7B10000E4CC8 /* Wins+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wins+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		03BA6C35227F7B34000E4CC8 /* Wins+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Wins+CoreDataClass.swift"; sourceTree = "<group>"; };
 		03C90B7F22551A8C000E450F /* GallowsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallowsViewController.swift; sourceTree = "<group>"; };
-		03C90B812255205E000E450F /* RectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectView.swift; sourceTree = "<group>"; };
 		03C90B8322566B69000E450F /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,15 +73,19 @@
 		03184D1C224C20C8008352D4 /* Minigame Tripleplay */ = {
 			isa = PBXGroup;
 			children = (
+				03BA6C33227F7B10000E4CC8 /* Wins+CoreDataProperties.swift */,
+				03BA6C35227F7B34000E4CC8 /* Wins+CoreDataClass.swift */,
+				03BA6C0A227F6845000E4CC8 /* StartGameViewController.swift */,
 				03184D1D224C20C8008352D4 /* AppDelegate.swift */,
 				03184D1F224C20C8008352D4 /* TicTacToeViewController.swift */,
 				03184D35224D4A34008352D4 /* HangmanViewController.swift */,
-				03C90B812255205E000E450F /* RectView.swift */,
 				03184D21224C20C8008352D4 /* Main.storyboard */,
+				03BA6C0C227F6DA5000E4CC8 /* SeeScoresViewController.swift */,
 				03C90B8322566B69000E450F /* PersonViewController.swift */,
-				03C90B7F22551A8C000E450F /* GallowsViewController.swift */,
 				03184D37224D4A51008352D4 /* WarViewController.swift */,
+				03C90B7F22551A8C000E450F /* GallowsViewController.swift */,
 				03184D33224D45E0008352D4 /* CircleView.swift */,
+				03BA6C2C227F79E8000E4CC8 /* Model.xcdatamodeld */,
 				03184D24224C20C9008352D4 /* Assets.xcassets */,
 				03184D26224C20C9008352D4 /* LaunchScreen.storyboard */,
 			);
@@ -151,12 +163,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03BA6C36227F7B34000E4CC8 /* Wins+CoreDataClass.swift in Sources */,
 				03C90B8022551A8C000E450F /* GallowsViewController.swift in Sources */,
+				03BA6C0D227F6DA5000E4CC8 /* SeeScoresViewController.swift in Sources */,
+				03BA6C34227F7B10000E4CC8 /* Wins+CoreDataProperties.swift in Sources */,
 				03184D34224D45E0008352D4 /* CircleView.swift in Sources */,
-				03C90B822255205E000E450F /* RectView.swift in Sources */,
 				03C90B8422566B69000E450F /* PersonViewController.swift in Sources */,
 				03184D20224C20C8008352D4 /* TicTacToeViewController.swift in Sources */,
+				03BA6C0B227F6845000E4CC8 /* StartGameViewController.swift in Sources */,
 				03184D1E224C20C8008352D4 /* AppDelegate.swift in Sources */,
+				03BA6C2E227F79E8000E4CC8 /* Model.xcdatamodeld in Sources */,
 				03184D38224D4A51008352D4 /* WarViewController.swift in Sources */,
 				03184D36224D4A34008352D4 /* HangmanViewController.swift in Sources */,
 			);
@@ -358,6 +374,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		03BA6C2C227F79E8000E4CC8 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				03BA6C2D227F79E8000E4CC8 /* Model.xcdatamodel */,
+			);
+			currentVersion = 03BA6C2D227F79E8000E4CC8 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 03184D12224C20C8008352D4 /* Project object */;
 }

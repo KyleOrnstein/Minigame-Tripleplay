@@ -13,6 +13,7 @@ class GallowsViewController: UIViewController {
     @IBOutlet var personView: UIView!
     @IBOutlet var gallowsView: UIView!
     @IBOutlet var bottomLabel: UILabel!
+    var wrongs = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,5 +21,5 @@ class GallowsViewController: UIViewController {
         gallowsView.addSubview(personView)
     }
 
-
+    
 }
