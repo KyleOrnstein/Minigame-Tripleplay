@@ -233,13 +233,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="heb-zD-ECR">
-                                <rect key="frame" x="0.0" y="99.999999999999972" width="414" height="463.33333333333326"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="388"/>
                                 <connections>
                                     <segue destination="yc0-Do-XP6" kind="embed" id="5TI-DO-UGR"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bLo-A7-uBA">
-                                <rect key="frame" x="0.0" y="563.33333333333337" width="414" height="123.66666666666663"/>
+                                <rect key="frame" x="0.0" y="488" width="414" height="199"/>
                                 <connections>
                                     <segue destination="upI-fX-o9N" kind="embed" id="Lte-Rb-9dD"/>
                                 </connections>
@@ -254,7 +254,7 @@
                             <constraint firstItem="bLo-A7-uBA" firstAttribute="top" secondItem="heb-zD-ECR" secondAttribute="bottom" id="F9z-s2-ekT"/>
                             <constraint firstItem="Yyv-KF-uJ5" firstAttribute="top" secondItem="aZc-LU-7cr" secondAttribute="top" id="YYJ-C8-rk3"/>
                             <constraint firstItem="bLo-A7-uBA" firstAttribute="width" secondItem="PtR-N1-DyV" secondAttribute="width" id="ZAj-Cn-UfA"/>
-                            <constraint firstItem="heb-zD-ECR" firstAttribute="bottom" secondItem="aZc-LU-7cr" secondAttribute="centerY" multiplier="1.5" id="him-TL-4al"/>
+                            <constraint firstItem="heb-zD-ECR" firstAttribute="bottom" secondItem="aZc-LU-7cr" secondAttribute="centerY" multiplier="1.3" id="him-TL-4al"/>
                             <constraint firstItem="heb-zD-ECR" firstAttribute="centerX" secondItem="aZc-LU-7cr" secondAttribute="centerX" id="luW-7S-4BT"/>
                             <constraint firstItem="bLo-A7-uBA" firstAttribute="centerX" secondItem="aZc-LU-7cr" secondAttribute="centerX" id="tws-iq-NiH"/>
                         </constraints>
@@ -312,21 +312,21 @@
             <objects>
                 <viewController id="QNf-Lo-pv1" customClass="SeeScoresViewController" customModule="Minigame_Tripleplay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qGb-EX-tyQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="463.33333333333326"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFC-2S-6en">
-                                <rect key="frame" x="168.66666666666666" y="0.0" width="77" height="30"/>
+                                <rect key="frame" x="168.66666666666666" y="64" width="77" height="30"/>
                                 <state key="normal" title="Reset Wins"/>
                                 <connections>
                                     <action selector="resetWins:" destination="QNf-Lo-pv1" eventType="touchUpInside" id="Yov-94-0z7"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fa9-oX-N65">
-                                <rect key="frame" x="0.0" y="30" width="414" height="433.33333333333331"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="642"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4TN-7h-uId">
-                                        <rect key="frame" x="132.66666666666669" y="0.0" width="148.66666666666669" height="143.66666666666666"/>
+                                        <rect key="frame" x="132.66666666666669" y="0.0" width="148.66666666666669" height="213.33333333333334"/>
                                         <string key="text">Hangman:
 User WIns = 0
 Computer Wins = 0</string>
@@ -335,7 +335,7 @@ Computer Wins = 0</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fk-bl-Q4X">
-                                        <rect key="frame" x="132.66666666666669" y="144.66666666666666" width="148.66666666666669" height="143.99999999999997"/>
+                                        <rect key="frame" x="132.66666666666669" y="214.33333333333331" width="148.66666666666669" height="213.33333333333331"/>
                                         <string key="text">Tictactoe WIns:
 User WIns = 0
 Computer Wins = 0</string>
@@ -344,7 +344,7 @@ Computer Wins = 0</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTT-Bb-Qo5">
-                                        <rect key="frame" x="132.66666666666669" y="289.66666666666669" width="148.66666666666669" height="143.66666666666669"/>
+                                        <rect key="frame" x="132.66666666666669" y="428.66666666666657" width="148.66666666666669" height="213.33333333333331"/>
                                         <string key="text">War WIns:
 User WIns = 0
 Computer Wins = 0</string>
@@ -427,11 +427,11 @@ TRIPLEPLAY</string>
             <objects>
                 <viewController id="yc0-Do-XP6" customClass="GallowstestViewController" customModule="Minigame_Tripleplay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="24l-iT-TPY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="463.33333333333326"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="388"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="side" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUu-EN-cm0">
-                                <rect key="frame" x="344" y="0.0" width="10" height="453.33333333333331"/>
+                                <rect key="frame" x="344" y="0.0" width="10" height="378"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="10" id="diR-UL-gFN"/>
@@ -462,7 +462,7 @@ TRIPLEPLAY</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="base" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1i-Ef-pY7">
-                                <rect key="frame" x="0.0" y="453.33333333333331" width="414" height="10"/>
+                                <rect key="frame" x="0.0" y="378" width="414" height="10"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="hun-xl-bdJ"/>
@@ -555,73 +555,73 @@ TRIPLEPLAY</string>
             <objects>
                 <viewController id="upI-fX-o9N" customClass="KeysTestViewController" customModule="Minigame_Tripleplay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="taF-7G-h2A">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="123.66666666666663"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="199"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="edP-ZO-AhX">
-                                <rect key="frame" x="0.0" y="36.000000000000007" width="414" height="87.666666666666686"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="edP-ZO-AhX">
+                                <rect key="frame" x="0.0" y="59.666666666666671" width="414" height="139.33333333333331"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jNk-nO-HZS">
-                                        <rect key="frame" x="32" y="0.0" width="350" height="24.666666666666668"/>
+                                        <rect key="frame" x="32" y="0.0" width="350" height="31.333333333333332"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUD-iT-rcQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="24.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="A"/>
                                                 <connections>
                                                     <action selector="aButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="SZy-N8-f90"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xu1-jd-Cnb">
-                                                <rect key="frame" x="40" y="0.0" width="30" height="24.666666666666668"/>
+                                                <rect key="frame" x="40" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="B"/>
                                                 <connections>
                                                     <action selector="bButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="EVI-hx-2qN"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KkV-nx-09b">
-                                                <rect key="frame" x="80" y="0.0" width="30" height="24.666666666666668"/>
+                                                <rect key="frame" x="80" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="C"/>
                                                 <connections>
                                                     <action selector="cButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="ICC-NM-TrQ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6J-50-ml0">
-                                                <rect key="frame" x="120" y="0.0" width="30" height="24.666666666666668"/>
+                                                <rect key="frame" x="120" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="D"/>
                                                 <connections>
                                                     <action selector="dButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="AYK-9z-ylk"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llg-kb-rbb">
-                                                <rect key="frame" x="160" y="0.0" width="30" height="24.666666666666668"/>
+                                                <rect key="frame" x="160" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="E"/>
                                                 <connections>
                                                     <action selector="eButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="xmm-CM-Fr2"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXT-KT-c5a">
-                                                <rect key="frame" x="200" y="0.0" width="30" height="24.666666666666668"/>
+                                                <rect key="frame" x="200" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="F"/>
                                                 <connections>
                                                     <action selector="fButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="ciW-QS-JNB"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EdA-Ls-CzT">
-                                                <rect key="frame" x="240" y="0.0" width="30" height="24.666666666666668"/>
+                                                <rect key="frame" x="240" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="G"/>
                                                 <connections>
                                                     <action selector="gButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="Lla-n4-vIQ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTK-Av-fac">
-                                                <rect key="frame" x="280" y="0.0" width="30" height="24.666666666666668"/>
+                                                <rect key="frame" x="280" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="H"/>
                                                 <connections>
                                                     <action selector="hButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="mvQ-lh-Akn"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myg-fS-VP4">
-                                                <rect key="frame" x="320" y="0.0" width="30" height="24.666666666666668"/>
+                                                <rect key="frame" x="320" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="I"/>
                                                 <connections>
                                                     <action selector="iButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="KDP-es-rVk"/>
@@ -630,66 +630,66 @@ TRIPLEPLAY</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LK3-64-vLg">
-                                        <rect key="frame" x="32" y="32.666666666666671" width="350" height="25"/>
+                                        <rect key="frame" x="32" y="53.333333333333343" width="350" height="31"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luS-K9-INp">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="J"/>
                                                 <connections>
                                                     <action selector="jButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="1Zy-vl-LjO"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHb-fM-6hi">
-                                                <rect key="frame" x="40" y="0.0" width="30" height="25"/>
+                                                <rect key="frame" x="40" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="K"/>
                                                 <connections>
                                                     <action selector="kButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="lju-BH-jV1"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLy-Ez-2im">
-                                                <rect key="frame" x="80" y="0.0" width="30" height="25"/>
+                                                <rect key="frame" x="80" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="L"/>
                                                 <connections>
                                                     <action selector="lButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="JaJ-zK-3Qj"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2D-by-GJK">
-                                                <rect key="frame" x="120" y="0.0" width="30" height="25"/>
+                                                <rect key="frame" x="120" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="M"/>
                                                 <connections>
                                                     <action selector="mButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="bgs-KE-ymd"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAH-IC-GOe">
-                                                <rect key="frame" x="160" y="0.0" width="30" height="25"/>
+                                                <rect key="frame" x="160" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="N"/>
                                                 <connections>
                                                     <action selector="nButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="aYl-LP-ALq"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kxk-33-aQE">
-                                                <rect key="frame" x="200" y="0.0" width="30" height="25"/>
+                                                <rect key="frame" x="200" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="O"/>
                                                 <connections>
                                                     <action selector="oButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="CtN-C4-4xu"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFF-UJ-AoU">
-                                                <rect key="frame" x="240" y="0.0" width="30" height="25"/>
+                                                <rect key="frame" x="240" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="P"/>
                                                 <connections>
                                                     <action selector="pButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="hAN-Fo-Tnn"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzf-Dt-sfW">
-                                                <rect key="frame" x="280" y="0.0" width="30" height="25"/>
+                                                <rect key="frame" x="280" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="Q"/>
                                                 <connections>
                                                     <action selector="qButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="il3-eF-2Wd"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="du7-w5-kaP">
-                                                <rect key="frame" x="320" y="0.0" width="30" height="25"/>
+                                                <rect key="frame" x="320" y="0.0" width="30" height="30"/>
                                                 <state key="normal" title="R"/>
                                                 <connections>
                                                     <action selector="rButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="cXh-w2-DZs"/>
@@ -698,59 +698,59 @@ TRIPLEPLAY</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RYO-KD-1jO">
-                                        <rect key="frame" x="52" y="65.666666666666671" width="310" height="22"/>
+                                        <rect key="frame" x="52" y="106.33333333333334" width="310" height="33"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WC8-1L-01T">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="22"/>
+                                                <rect key="frame" x="0.0" y="1.6666666666666572" width="30" height="30"/>
                                                 <state key="normal" title="S"/>
                                                 <connections>
                                                     <action selector="sButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="HJC-CY-xE5"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbP-yx-8dc">
-                                                <rect key="frame" x="40" y="0.0" width="30" height="22"/>
+                                                <rect key="frame" x="40" y="1.6666666666666572" width="30" height="30"/>
                                                 <state key="normal" title="T"/>
                                                 <connections>
                                                     <action selector="tButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="obe-zP-W0x"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRc-Nn-0kl">
-                                                <rect key="frame" x="80" y="0.0" width="30" height="22"/>
+                                                <rect key="frame" x="80" y="1.6666666666666572" width="30" height="30"/>
                                                 <state key="normal" title="U"/>
                                                 <connections>
                                                     <action selector="uButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="Mda-nn-Rjn"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4il-TB-qPX">
-                                                <rect key="frame" x="120" y="0.0" width="30" height="22"/>
+                                                <rect key="frame" x="120" y="1.6666666666666572" width="30" height="30"/>
                                                 <state key="normal" title="V"/>
                                                 <connections>
                                                     <action selector="vButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="DfA-Aa-Hgy"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVX-YI-rfP">
-                                                <rect key="frame" x="160" y="0.0" width="30" height="22"/>
+                                                <rect key="frame" x="160" y="1.6666666666666572" width="30" height="30"/>
                                                 <state key="normal" title="W"/>
                                                 <connections>
                                                     <action selector="wButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="IGg-LB-ybh"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zip-zZ-CkQ">
-                                                <rect key="frame" x="200" y="0.0" width="30" height="22"/>
+                                                <rect key="frame" x="200" y="1.6666666666666572" width="30" height="30"/>
                                                 <state key="normal" title="X"/>
                                                 <connections>
                                                     <action selector="xButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="Sxr-Ik-LKB"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4H4-A1-dGu">
-                                                <rect key="frame" x="240" y="0.0" width="30" height="22"/>
+                                                <rect key="frame" x="240" y="1.6666666666666572" width="30" height="30"/>
                                                 <state key="normal" title="Y"/>
                                                 <connections>
                                                     <action selector="yButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="ayx-mP-8Yf"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AqC-hL-6g8">
-                                                <rect key="frame" x="280" y="0.0" width="30" height="22"/>
+                                                <rect key="frame" x="280" y="1.6666666666666572" width="30" height="30"/>
                                                 <state key="normal" title="Z"/>
                                                 <connections>
                                                     <action selector="zButtonPressed:" destination="upI-fX-o9N" eventType="touchUpInside" id="jhu-fI-frk"/>
@@ -760,15 +760,6 @@ TRIPLEPLAY</string>
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fch-vQ-aQK">
-                                <rect key="frame" x="172.66666666666666" y="0.0" width="68.666666666666657" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="ZMX-ea-wJ8"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahs-Rp-Hv9">
                                 <rect key="frame" x="350" y="0.0" width="64" height="30"/>
                                 <state key="normal" title="Play Now"/>
@@ -776,18 +767,25 @@ TRIPLEPLAY</string>
                                     <action selector="playNow:" destination="upI-fX-o9N" eventType="touchUpInside" id="Kzf-AO-6mf"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fch-vQ-aQK">
+                                <rect key="frame" x="184" y="0.0" width="46.333333333333343" height="59.666666666666664"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="edP-ZO-AhX" firstAttribute="width" secondItem="taF-7G-h2A" secondAttribute="width" id="Aj1-Hh-zh0"/>
-                            <constraint firstItem="ahs-Rp-Hv9" firstAttribute="top" secondItem="taF-7G-h2A" secondAttribute="top" id="RE6-TQ-Hvn"/>
-                            <constraint firstAttribute="trailing" secondItem="ahs-Rp-Hv9" secondAttribute="trailing" id="Xbc-Td-xiX"/>
-                            <constraint firstItem="fch-vQ-aQK" firstAttribute="top" secondItem="taF-7G-h2A" secondAttribute="top" id="ceW-PM-g4i"/>
+                            <constraint firstAttribute="trailing" secondItem="ahs-Rp-Hv9" secondAttribute="trailing" id="QbQ-6T-iVh"/>
+                            <constraint firstItem="ahs-Rp-Hv9" firstAttribute="top" secondItem="taF-7G-h2A" secondAttribute="top" id="RE0-bZ-iHb"/>
+                            <constraint firstAttribute="bottom" secondItem="edP-ZO-AhX" secondAttribute="bottom" id="TYX-Cv-dnA"/>
                             <constraint firstItem="edP-ZO-AhX" firstAttribute="centerX" secondItem="taF-7G-h2A" secondAttribute="centerX" id="gw0-8X-a3H"/>
+                            <constraint firstItem="edP-ZO-AhX" firstAttribute="height" secondItem="taF-7G-h2A" secondAttribute="height" multiplier="0.7" id="mj1-Pi-qzJ"/>
                             <constraint firstItem="fch-vQ-aQK" firstAttribute="centerX" secondItem="taF-7G-h2A" secondAttribute="centerX" id="pEd-Gh-7fV"/>
-                            <constraint firstItem="edP-ZO-AhX" firstAttribute="top" secondItem="fch-vQ-aQK" secondAttribute="bottom" id="q3w-sZ-F48"/>
-                            <constraint firstAttribute="bottom" secondItem="edP-ZO-AhX" secondAttribute="bottom" id="qgR-3b-lvm"/>
+                            <constraint firstItem="fch-vQ-aQK" firstAttribute="height" secondItem="taF-7G-h2A" secondAttribute="height" multiplier="0.3" id="x2y-Lh-meC"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="8sA-5i-oca"/>
                     </view>
                     <connections>
                         <outlet property="aToi" destination="jNk-nO-HZS" id="0Or-xD-fPV"/>
@@ -826,13 +824,13 @@ TRIPLEPLAY</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ojV-7S-MB6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="E2J-BI-gpp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2897" y="-165"/>
+            <point key="canvasLocation" x="2894.202898550725" y="-165.48913043478262"/>
         </scene>
     </scenes>
     <resources>
         <image name="Image" width="183" height="275"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="G1c-DI-pUf"/>
+        <segue reference="ycE-tX-y87"/>
     </inferredMetricsTieBreakers>
 </document>
