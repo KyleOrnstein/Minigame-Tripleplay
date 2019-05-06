@@ -1,9 +1,8 @@
-
 //
-//  PersonViewController.swift
+//  GallowstestViewController.swift
 //  Minigame Tripleplay
 //
-//  Created by Kyle Ornstein on 4/4/19.
+//  Created by Kyle Ornstein on 5/5/19.
 //  Copyright © 2019 Kyle Ornstein. All rights reserved.
 //
 
@@ -33,21 +32,18 @@ extension UIView {
     }
 }
 
-class PersonViewController: UIViewController {
-    
+
+class GallowstestViewController: UIViewController {
     @IBOutlet var leftLeg: UIView!
     @IBOutlet var rightLeg: UIView!
     @IBOutlet var leftArm: UIView!
     @IBOutlet var rightArm: UIView!
     @IBOutlet var personView: UIView!
     @IBOutlet var body: UIView!
+    @IBOutlet var head: UIView!
     var wrongs = 0
     
-    func drawHead(){
-        let circleView = CircleView(frame: CGRect(x: personView.frame.width/2, y: 0, width: 40, height: 40))
-        personView.addSubview(circleView)
-    }
-    
+
     func setArmsAndLegs(){
         leftLeg.setAnchorPoint(CGPoint(x: 1, y: 0))
         rightLeg.setAnchorPoint(CGPoint(x: 0, y: 0))
@@ -57,6 +53,7 @@ class PersonViewController: UIViewController {
         self.rightLeg.transform = CGAffineTransform(rotationAngle: (.pi / -4))
         self.leftArm.transform = CGAffineTransform(rotationAngle: (.pi / -4))
         self.rightArm.transform = CGAffineTransform(rotationAngle: (.pi / 4))
+        self.head.alpha = 0
         self.leftArm.alpha = 0
         self.leftLeg.alpha = 0
         self.rightArm.alpha = 0
@@ -67,7 +64,7 @@ class PersonViewController: UIViewController {
     func addBodyParts(){
         switch wrongs {
         case 1:
-            drawHead()
+            self.head.alpha = 1
             break
         case 2:
             self.body.alpha = 1
@@ -91,17 +88,18 @@ class PersonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         setArmsAndLegs()
-        addBodyParts()
+        // Do any additional setup after loading the view.
     }
-
+    
+    @IBAction func seeScores(_ sender: Any) {
+        performSegue(withIdentifier: "seeScoresH", sender: nil)
+    }
+    
     @IBAction func updateHangedMan (sender: UIStoryboardSegue) {
-        if let controller = sender.source as? HangmanViewController {
+        if let controller = sender.source as? KeysTestViewController {
             wrongs = controller.wrongs
         }
-        print(wrongs)
         addBodyParts()
     }
-
 }

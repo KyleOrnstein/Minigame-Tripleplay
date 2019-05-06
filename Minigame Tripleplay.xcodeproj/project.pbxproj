@@ -7,24 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031724C4227FD98100C6A81B /* GallowstestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031724C2227FD98000C6A81B /* GallowstestViewController.swift */; };
+		031724C5227FD98100C6A81B /* KeysTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031724C3227FD98000C6A81B /* KeysTestViewController.swift */; };
 		03184D1E224C20C8008352D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03184D1D224C20C8008352D4 /* AppDelegate.swift */; };
 		03184D20224C20C8008352D4 /* TicTacToeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03184D1F224C20C8008352D4 /* TicTacToeViewController.swift */; };
 		03184D23224C20C8008352D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03184D21224C20C8008352D4 /* Main.storyboard */; };
 		03184D25224C20C9008352D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03184D24224C20C9008352D4 /* Assets.xcassets */; };
 		03184D28224C20C9008352D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03184D26224C20C9008352D4 /* LaunchScreen.storyboard */; };
 		03184D34224D45E0008352D4 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03184D33224D45E0008352D4 /* CircleView.swift */; };
-		03184D36224D4A34008352D4 /* HangmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03184D35224D4A34008352D4 /* HangmanViewController.swift */; };
 		03184D38224D4A51008352D4 /* WarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03184D37224D4A51008352D4 /* WarViewController.swift */; };
 		03BA6C0B227F6845000E4CC8 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA6C0A227F6845000E4CC8 /* StartGameViewController.swift */; };
 		03BA6C0D227F6DA5000E4CC8 /* SeeScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA6C0C227F6DA5000E4CC8 /* SeeScoresViewController.swift */; };
 		03BA6C2E227F79E8000E4CC8 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03BA6C2C227F79E8000E4CC8 /* Model.xcdatamodeld */; };
 		03BA6C34227F7B10000E4CC8 /* Wins+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA6C33227F7B10000E4CC8 /* Wins+CoreDataProperties.swift */; };
 		03BA6C36227F7B34000E4CC8 /* Wins+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA6C35227F7B34000E4CC8 /* Wins+CoreDataClass.swift */; };
-		03C90B8022551A8C000E450F /* GallowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C90B7F22551A8C000E450F /* GallowsViewController.swift */; };
-		03C90B8422566B69000E450F /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C90B8322566B69000E450F /* PersonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		031724C2227FD98000C6A81B /* GallowstestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GallowstestViewController.swift; sourceTree = "<group>"; };
+		031724C3227FD98000C6A81B /* KeysTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeysTestViewController.swift; sourceTree = "<group>"; };
 		03184D1A224C20C8008352D4 /* Minigame Tripleplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Minigame Tripleplay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03184D1D224C20C8008352D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03184D1F224C20C8008352D4 /* TicTacToeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewController.swift; sourceTree = "<group>"; };
@@ -32,15 +33,12 @@
 		03184D24224C20C9008352D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03184D27224C20C9008352D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03184D33224D45E0008352D4 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
-		03184D35224D4A34008352D4 /* HangmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanViewController.swift; sourceTree = "<group>"; };
 		03184D37224D4A51008352D4 /* WarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarViewController.swift; sourceTree = "<group>"; };
 		03BA6C0A227F6845000E4CC8 /* StartGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
 		03BA6C0C227F6DA5000E4CC8 /* SeeScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeScoresViewController.swift; sourceTree = "<group>"; };
 		03BA6C2D227F79E8000E4CC8 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		03BA6C33227F7B10000E4CC8 /* Wins+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wins+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		03BA6C35227F7B34000E4CC8 /* Wins+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Wins+CoreDataClass.swift"; sourceTree = "<group>"; };
-		03C90B7F22551A8C000E450F /* GallowsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallowsViewController.swift; sourceTree = "<group>"; };
-		03C90B8322566B69000E450F /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,12 +76,11 @@
 				03BA6C0A227F6845000E4CC8 /* StartGameViewController.swift */,
 				03184D1D224C20C8008352D4 /* AppDelegate.swift */,
 				03184D1F224C20C8008352D4 /* TicTacToeViewController.swift */,
-				03184D35224D4A34008352D4 /* HangmanViewController.swift */,
 				03184D21224C20C8008352D4 /* Main.storyboard */,
 				03BA6C0C227F6DA5000E4CC8 /* SeeScoresViewController.swift */,
-				03C90B8322566B69000E450F /* PersonViewController.swift */,
+				031724C2227FD98000C6A81B /* GallowstestViewController.swift */,
+				031724C3227FD98000C6A81B /* KeysTestViewController.swift */,
 				03184D37224D4A51008352D4 /* WarViewController.swift */,
-				03C90B7F22551A8C000E450F /* GallowsViewController.swift */,
 				03184D33224D45E0008352D4 /* CircleView.swift */,
 				03BA6C2C227F79E8000E4CC8 /* Model.xcdatamodeld */,
 				03184D24224C20C9008352D4 /* Assets.xcassets */,
@@ -163,18 +160,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				031724C5227FD98100C6A81B /* KeysTestViewController.swift in Sources */,
 				03BA6C36227F7B34000E4CC8 /* Wins+CoreDataClass.swift in Sources */,
-				03C90B8022551A8C000E450F /* GallowsViewController.swift in Sources */,
 				03BA6C0D227F6DA5000E4CC8 /* SeeScoresViewController.swift in Sources */,
 				03BA6C34227F7B10000E4CC8 /* Wins+CoreDataProperties.swift in Sources */,
 				03184D34224D45E0008352D4 /* CircleView.swift in Sources */,
-				03C90B8422566B69000E450F /* PersonViewController.swift in Sources */,
+				031724C4227FD98100C6A81B /* GallowstestViewController.swift in Sources */,
 				03184D20224C20C8008352D4 /* TicTacToeViewController.swift in Sources */,
 				03BA6C0B227F6845000E4CC8 /* StartGameViewController.swift in Sources */,
 				03184D1E224C20C8008352D4 /* AppDelegate.swift in Sources */,
 				03BA6C2E227F79E8000E4CC8 /* Model.xcdatamodeld in Sources */,
 				03184D38224D4A51008352D4 /* WarViewController.swift in Sources */,
-				03184D36224D4A34008352D4 /* HangmanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
