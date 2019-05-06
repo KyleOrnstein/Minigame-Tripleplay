@@ -37,6 +37,8 @@ class TicTacToeViewController: UIViewController{
     //possible winning combinations for player
     func checkWin(board: [[String]]) {
         
+        print ("hello its me")
+        
         if
             (board[0][0] == player1 && board[0][1] == player1 && board[0][2] == player1) ||
                 (board[1][0] == player1 && board[1][1] == player1 && board[1][2] == player1) ||
@@ -78,7 +80,7 @@ class TicTacToeViewController: UIViewController{
         
         moves = moves + 1
         
-        if moves % 2 != 0
+        if 1 == 1
         {
             box1button.setTitle("X", for: .normal)
             board[0][0] = "X"
@@ -88,14 +90,8 @@ class TicTacToeViewController: UIViewController{
             box1button.setTitle("O", for: .normal)
             board[0][0] = "O"
         }
-        if moves < 9
-        {
-            checkWin(board: board)
-        }
-        else
-        {
-            //draw
-        }
+        checkWin(board: board)
+
         print (board)
     }
     
@@ -315,9 +311,9 @@ class TicTacToeViewController: UIViewController{
         do {
             let test = try context.fetch(fetchRequest)
             let object = test[0] as! NSManagedObject
-            if winner == "user"{
+            if winner == "player1"{
                 for data in test as! [NSManagedObject] {
-                    object.setValue(Int(data.value(forKey: "tictactoeP1") as! Int32) + 1, forKey: "tictactoeP1")
+                    object.setValue(Int(data.value(forKey: "tictactoeU") as! Int32) + 1, forKey: "tictactoeU")
                 }
                 do {
                     try context.save()
@@ -329,7 +325,7 @@ class TicTacToeViewController: UIViewController{
             }
             else{
                 for data in test as! [NSManagedObject] {
-                    object.setValue(Int(data.value(forKey: "tictactoeP2") as! Int32) + 1, forKey: "tictactoeP2")
+                    object.setValue(Int(data.value(forKey: "tictactoeC") as! Int32) + 1, forKey: "tictactoeC")
                 }
                 do {
                     try context.save()
