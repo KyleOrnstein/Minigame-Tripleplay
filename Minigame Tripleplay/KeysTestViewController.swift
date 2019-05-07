@@ -488,6 +488,8 @@ class KeysTestViewController: UIViewController {
         word = wordList[Int(arc4random_uniform(UInt32(wordList.count)))]
         replacingArr = ""
         reenableButtons()
+        wrongs = 0
+        performSegue(withIdentifier: "gallows", sender: self)
         if let w = word{
             var count = 0
             while count != w.count{

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sil-oZ-yMN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sil-oZ-yMN">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -259,19 +259,18 @@
                                     <constraint firstItem="RcE-AW-0bX" firstAttribute="width" secondItem="Acb-om-N9J" secondAttribute="width" multiplier="0.8" id="29s-E9-Lua"/>
                                     <constraint firstItem="RcE-AW-0bX" firstAttribute="centerY" secondItem="Acb-om-N9J" secondAttribute="centerY" multiplier="1.5" id="363-yg-0Kx"/>
                                     <constraint firstItem="xbp-6W-fh8" firstAttribute="top" secondItem="E2u-V4-aGi" secondAttribute="bottom" constant="8.6666666666666856" id="7ZQ-j4-otb"/>
-                                    <constraint firstItem="9P0-ot-zLr" firstAttribute="leading" secondItem="A66-aK-BGc" secondAttribute="trailing" constant="83.666666666666686" id="BdP-C1-fzF"/>
+                                    <constraint firstItem="mMU-Vf-3Vz" firstAttribute="centerX" secondItem="Acb-om-N9J" secondAttribute="centerX" id="BE1-kY-J30"/>
                                     <constraint firstItem="A66-aK-BGc" firstAttribute="top" secondItem="RcE-AW-0bX" secondAttribute="bottom" constant="13.666666666666629" id="CU8-bF-fPW"/>
                                     <constraint firstItem="hpn-la-wmp" firstAttribute="leading" secondItem="RE0-a0-JmM" secondAttribute="trailing" constant="8.6666666666666714" id="FBm-1Z-ahZ"/>
                                     <constraint firstItem="WNa-ci-29x" firstAttribute="top" secondItem="xbp-6W-fh8" secondAttribute="bottom" constant="87.333333333333314" id="GqU-yA-vlg"/>
-                                    <constraint firstItem="udn-e8-GiS" firstAttribute="leading" secondItem="hpn-la-wmp" secondAttribute="trailing" constant="83.333333333333329" id="HkB-0Q-Eiq"/>
+                                    <constraint firstItem="udn-e8-GiS" firstAttribute="centerX" secondItem="Acb-om-N9J" secondAttribute="centerX" id="I7V-OX-Nxq"/>
                                     <constraint firstItem="xbp-6W-fh8" firstAttribute="centerY" secondItem="Acb-om-N9J" secondAttribute="centerY" multiplier="0.5" id="MLU-SB-7d3"/>
                                     <constraint firstItem="c9c-jQ-pYe" firstAttribute="top" secondItem="RcE-AW-0bX" secondAttribute="bottom" constant="13.666666666666629" id="R7W-xF-jU4"/>
-                                    <constraint firstItem="9P0-ot-zLr" firstAttribute="leading" secondItem="udn-e8-GiS" secondAttribute="trailing" constant="83.666666666666686" id="RO5-Hb-JMH"/>
                                     <constraint firstItem="hpn-la-wmp" firstAttribute="leading" secondItem="WNa-ci-29x" secondAttribute="trailing" constant="8.6666666666666714" id="UbL-pb-12w"/>
                                     <constraint firstItem="xbp-6W-fh8" firstAttribute="centerX" secondItem="Acb-om-N9J" secondAttribute="centerX" id="V0S-fe-jsD"/>
                                     <constraint firstItem="hpn-la-wmp" firstAttribute="centerX" secondItem="Acb-om-N9J" secondAttribute="centerX" multiplier="0.5" id="Vii-f5-lJo"/>
-                                    <constraint firstItem="9P0-ot-zLr" firstAttribute="leading" secondItem="mMU-Vf-3Vz" secondAttribute="trailing" constant="83.666666666666686" id="Vzi-dS-fkD"/>
                                     <constraint firstItem="uOX-9D-6e3" firstAttribute="leading" secondItem="9P0-ot-zLr" secondAttribute="trailing" constant="18.333333333333314" id="W9g-hG-5JX"/>
+                                    <constraint firstItem="A66-aK-BGc" firstAttribute="centerX" secondItem="Acb-om-N9J" secondAttribute="centerX" id="YjG-vi-Xm4"/>
                                     <constraint firstItem="9P0-ot-zLr" firstAttribute="centerX" secondItem="Acb-om-N9J" secondAttribute="centerX" multiplier="1.5" id="fzi-4e-Edb"/>
                                     <constraint firstItem="RcE-AW-0bX" firstAttribute="centerX" secondItem="Acb-om-N9J" secondAttribute="centerX" id="gyh-9o-6rc"/>
                                     <constraint firstItem="xbp-6W-fh8" firstAttribute="width" secondItem="Acb-om-N9J" secondAttribute="width" multiplier="0.8" id="ha4-lC-y48"/>
@@ -303,14 +302,23 @@
                                     <segue destination="QNf-Lo-pv1" kind="show" identifier="seeScoresT" id="ycE-tX-y87"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdt-7u-eCM">
+                                <rect key="frame" x="343" y="67" width="71" height="30"/>
+                                <state key="normal" title="Play Again"/>
+                                <connections>
+                                    <action selector="playAgain:" destination="uOE-5G-TSW" eventType="touchUpInside" id="dMC-pn-JRc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Acb-om-N9J" firstAttribute="top" secondItem="kd3-Ca-ltm" secondAttribute="top" multiplier="4" id="2pI-zZ-CUR"/>
                             <constraint firstItem="Acb-om-N9J" firstAttribute="width" secondItem="FUO-GP-wYz" secondAttribute="width" id="C4I-9V-Fmk"/>
                             <constraint firstItem="God-dx-OYz" firstAttribute="top" secondItem="uUu-P3-eq5" secondAttribute="top" id="F85-Kk-YHZ"/>
+                            <constraint firstItem="Gdt-7u-eCM" firstAttribute="centerY" secondItem="uUu-P3-eq5" secondAttribute="centerY" id="Fa7-3W-4OH"/>
                             <constraint firstItem="God-dx-OYz" firstAttribute="leading" secondItem="FUO-GP-wYz" secondAttribute="leading" id="JT4-gT-1pe"/>
                             <constraint firstItem="Acb-om-N9J" firstAttribute="centerX" secondItem="kd3-Ca-ltm" secondAttribute="centerX" id="JoI-Hc-RQG"/>
+                            <constraint firstItem="kd3-Ca-ltm" firstAttribute="trailing" secondItem="Gdt-7u-eCM" secondAttribute="trailing" id="PPU-nn-xnl"/>
                             <constraint firstItem="Acb-om-N9J" firstAttribute="height" secondItem="FUO-GP-wYz" secondAttribute="height" multiplier="0.7" id="W8C-HK-Me1"/>
                             <constraint firstItem="kd3-Ca-ltm" firstAttribute="trailing" secondItem="Acb-om-N9J" secondAttribute="trailing" id="chh-gZ-biA"/>
                             <constraint firstItem="uUu-P3-eq5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="God-dx-OYz" secondAttribute="trailing" constant="53" id="dNc-UG-0bK"/>
@@ -591,8 +599,16 @@ TRIPLEPLAY</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CyE-G3-2CR">
+                                <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
+                                <state key="normal" title="See Score"/>
+                                <connections>
+                                    <action selector="seeScores:" destination="yc0-Do-XP6" eventType="touchUpInside" id="69q-Bn-pYG"/>
+                                    <segue destination="QNf-Lo-pv1" kind="show" identifier="seeScoresH" id="G1c-DI-pUf"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lf3-wt-dig">
-                                <rect key="frame" x="85" y="47" width="119" height="128"/>
+                                <rect key="frame" x="85" y="49" width="119" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wlc-IK-89d">
@@ -629,14 +645,6 @@ TRIPLEPLAY</string>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CyE-G3-2CR">
-                                <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
-                                <state key="normal" title="See Score"/>
-                                <connections>
-                                    <action selector="seeScores:" destination="yc0-Do-XP6" eventType="touchUpInside" id="69q-Bn-pYG"/>
-                                    <segue destination="QNf-Lo-pv1" kind="show" identifier="seeScoresH" id="G1c-DI-pUf"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>

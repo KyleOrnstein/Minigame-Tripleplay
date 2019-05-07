@@ -34,10 +34,44 @@ class TicTacToeViewController: UIViewController{
     //delcaration of move counter
     var moves = 0
     
+    func disableAllButtons(){
+        box1button.isEnabled = false
+        box2button.isEnabled = false
+        box3button.isEnabled = false
+        box4button.isEnabled = false
+        box5button.isEnabled = false
+        box6button.isEnabled = false
+        box7button.isEnabled = false
+        box8button.isEnabled = false
+        box9button.isEnabled = false
+    }
+    
+    func reableAllButtons(){
+        box1button.isEnabled = true
+        box2button.isEnabled = true
+        box3button.isEnabled = true
+        box4button.isEnabled = true
+        box5button.isEnabled = true
+        box6button.isEnabled = true
+        box7button.isEnabled = true
+        box8button.isEnabled = true
+        box9button.isEnabled = true
+    }
+    
+    func clearButtons(){
+        box1button.setTitle("", for: .normal)
+        box2button.setTitle("", for: .normal)
+        box3button.setTitle("", for: .normal)
+        box4button.setTitle("", for: .normal)
+        box5button.setTitle("", for: .normal)
+        box6button.setTitle("", for: .normal)
+        box7button.setTitle("", for: .normal)
+        box8button.setTitle("", for: .normal)
+        box9button.setTitle("", for: .normal)
+    }
+    
     //possible winning combinations for player
     func checkWin(board: [[String]]) {
-        
-        print ("hello its me")
         
         if
             (board[0][0] == player1 && board[0][1] == player1 && board[0][2] == player1) ||
@@ -51,6 +85,7 @@ class TicTacToeViewController: UIViewController{
         {
             print("Player 1 won")
             updateTicTacToe(winner: "player1")
+            disableAllButtons()
         }
         else if
             (board[0][0] == player2 && board[0][1] == player2 && board[0][2] == player2) ||
@@ -64,6 +99,7 @@ class TicTacToeViewController: UIViewController{
         {
             print("Player 2 won")
             updateTicTacToe(winner: "player2")
+            disableAllButtons()
         }
     }
     
@@ -299,9 +335,15 @@ class TicTacToeViewController: UIViewController{
         performSegue(withIdentifier: "seeScoresT", sender: nil)
     }
     
-    func winAnimations() {
-        
+    @IBAction func playAgain(_ sender: Any) {
+        board = [["","",""],
+                 ["","",""],
+                 ["","",""]]
+        moves = 0
+        reableAllButtons()
+        clearButtons()
     }
+    
     
     func updateTicTacToe(winner: String){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate

@@ -86,6 +86,15 @@ class GallowstestViewController: UIViewController {
         }
     }
     
+    func bodyDisapear(){
+        self.head.alpha = 0
+        self.leftArm.alpha = 0
+        self.leftLeg.alpha = 0
+        self.rightArm.alpha = 0
+        self.rightLeg.alpha = 0
+        self.body.alpha = 0
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setArmsAndLegs()
@@ -100,6 +109,11 @@ class GallowstestViewController: UIViewController {
         if let controller = sender.source as? KeysTestViewController {
             wrongs = controller.wrongs
         }
-        addBodyParts()
+        if wrongs != 0{
+            addBodyParts()
+        }
+        else{
+            bodyDisapear()
+        }
     }
 }
